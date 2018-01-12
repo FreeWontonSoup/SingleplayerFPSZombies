@@ -1,0 +1,304 @@
+fileFormatVersion: 2
+guid: 54d1e33069bad45a0a137e27c5ce5830
+timeCreated: 1515528128
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: ArmorPants
+    100004: Body
+    100006: Chest
+    100008: elbow.L
+    100010: elbow.L_end
+    100012: elbow.R
+    100014: elbow.R_end
+    100016: Fingers01.L
+    100018: Fingers01.R
+    100020: Fingers02.L
+    100022: Fingers02.L_end
+    100024: Fingers02.R
+    100026: Fingers02.R_end
+    100028: Foot.L
+    100030: Foot.R
+    100032: GunTwo
+    100034: Hair
+    100036: Hand.L
+    100038: Hand.R
+    100040: Hand_IK.L
+    100042: Hand_IK.L.001
+    100044: Hand_IK.L.001_end
+    100046: Hand_IK.R
+    100048: Head
+    100050: Head_end
+    100052: Hips
+    100054: Leg IK.L
+    100056: Leg IK.L_end
+    100058: Leg IK.R
+    100060: Leg IK.R_end
+    100062: Lower Arm.L
+    100064: Lower Arm.R
+    100066: Lower Leg.L
+    100068: Lower Leg.R
+    100070: Neck
+    100072: //RootNode
+    100074: Pole Target.L
+    100076: Pole Target.L_end
+    100078: Pole Target.R
+    100080: Pole Target.R_end
+    100082: Shirt
+    100084: Shirt.001
+    100086: Shirt.003
+    100088: Shirt.004
+    100090: Shoes
+    100092: Shoulder.L
+    100094: Shoulder.R
+    100096: Spine
+    100098: Thumb01.L
+    100100: Thumb01.R
+    100102: Thumb02.L
+    100104: Thumb02.L_end
+    100106: Thumb02.R
+    100108: Thumb02.R_end
+    100110: Toes.L
+    100112: Toes.L_end
+    100114: Toes.R
+    100116: Toes.R_end
+    100118: Upper Arm.L
+    100120: Upper Arm.R
+    100122: Upper Leg.L
+    100124: Upper Leg.R
+    400000: Armature
+    400002: ArmorPants
+    400004: Body
+    400006: Chest
+    400008: elbow.L
+    400010: elbow.L_end
+    400012: elbow.R
+    400014: elbow.R_end
+    400016: Fingers01.L
+    400018: Fingers01.R
+    400020: Fingers02.L
+    400022: Fingers02.L_end
+    400024: Fingers02.R
+    400026: Fingers02.R_end
+    400028: Foot.L
+    400030: Foot.R
+    400032: GunTwo
+    400034: Hair
+    400036: Hand.L
+    400038: Hand.R
+    400040: Hand_IK.L
+    400042: Hand_IK.L.001
+    400044: Hand_IK.L.001_end
+    400046: Hand_IK.R
+    400048: Head
+    400050: Head_end
+    400052: Hips
+    400054: Leg IK.L
+    400056: Leg IK.L_end
+    400058: Leg IK.R
+    400060: Leg IK.R_end
+    400062: Lower Arm.L
+    400064: Lower Arm.R
+    400066: Lower Leg.L
+    400068: Lower Leg.R
+    400070: Neck
+    400072: //RootNode
+    400074: Pole Target.L
+    400076: Pole Target.L_end
+    400078: Pole Target.R
+    400080: Pole Target.R_end
+    400082: Shirt
+    400084: Shirt.001
+    400086: Shirt.003
+    400088: Shirt.004
+    400090: Shoes
+    400092: Shoulder.L
+    400094: Shoulder.R
+    400096: Spine
+    400098: Thumb01.L
+    400100: Thumb01.R
+    400102: Thumb02.L
+    400104: Thumb02.L_end
+    400106: Thumb02.R
+    400108: Thumb02.R_end
+    400110: Toes.L
+    400112: Toes.L_end
+    400114: Toes.R
+    400116: Toes.R_end
+    400118: Upper Arm.L
+    400120: Upper Arm.R
+    400122: Upper Leg.L
+    400124: Upper Leg.R
+    2300000: GunTwo
+    3300000: GunTwo
+    4300000: Shirt.004
+    4300002: Shirt.003
+    4300004: Shirt.001
+    4300006: Hair
+    4300008: Shoes
+    4300010: Shirt
+    4300012: ArmorPants
+    4300014: Body
+    4300016: GunTwo
+    7400000: Armature|CrouchDown
+    7400002: Armature|CrouchUp
+    7400004: Armature|CrouchWalk
+    7400006: Armature|CrouchWalkRev
+    7400008: Armature|Death
+    7400010: Armature|FireIdle
+    7400012: Armature|GunIdle
+    7400014: Armature|GunWalk
+    7400016: Armature|GunWalkLeftStrafeTest
+    7400018: Armature|GunWalkRev
+    7400020: Armature|GunWalkRightStrafeTest
+    7400022: Armature|Idle
+    7400024: Armature|LeftStrafeWalkTest
+    7400026: Armature|RightStrafeWalkTest
+    7400028: Armature|Run
+    7400030: Armature|RunRev
+    7400032: Armature|Walk
+    7400034: Armature|WalkRev
+    9500000: //RootNode
+    13700000: ArmorPants
+    13700002: Body
+    13700004: Hair
+    13700006: Shirt
+    13700008: Shirt.001
+    13700010: Shirt.003
+    13700012: Shirt.004
+    13700014: Shoes
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 3bfcecc6b560c482eb0adde65b721941, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2100000, guid: 59cba16df47e04f9aa1c70fbcb31f644, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 1cbc9cf8357434cde823a3d63f47f3ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 33d7e9554494e4037b3abefb23dacdc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: cf27d934328d94efcacc27070d935739, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 73cbc5c03dc7c41da89886bb4c453806, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 375bea69ad0b941e78214c647f137842, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pants
+    second: {fileID: 2100000, guid: 4ada6549a901a4568a3b5d5dd841bc9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PantsArmor
+    second: {fileID: 2100000, guid: 63ed49e43314b41a4ae20347c281a5cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoe
+    second: {fileID: 2100000, guid: 628ac9dfd26cc4fac95cd11afeafd165, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 6c04f9232d97d4ec69174d315ca6b1a6, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
