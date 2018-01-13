@@ -22,6 +22,10 @@ public class EnemyController : MonoBehaviour
     public PlayerHealth ph;
     public int damage;
     public PlayerDeath c;
+    public AudioClip[] attackSounds;
+    public AudioClip[] deathSounds;
+    public AudioSource audio;
+    //AudioSource audio;
     //public Transform target;
 
 	// Use this for initialization
@@ -31,16 +35,19 @@ public class EnemyController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animController = GetComponentInParent<Animator>();
         game = FindObjectOfType<GameManagement>();
-        health = 20 + (1.25F * game.roundNum);
+        health = 20 + (10 * game.roundNum);
         deadAnim = GetComponent<Animator>();
 
         myTransform = transform;
         maxDist = 3;
         attackTimer = 0;
-        damage = -10;
+        damage = -1;
 
         ph = (PlayerHealth)player.GetComponent(typeof(PlayerHealth));
         c = (PlayerDeath)GameObject.FindGameObjectWithTag("MainCamera").GetComponent(typeof(PlayerDeath));
+
+        //speed of our zombie
+        nav.speed = 0.5f + Random.Range(0f, 3f);
 
 	}
 	
@@ -55,12 +62,18 @@ public class EnemyController : MonoBehaviour
         if(attackTimer > 0)
         {
             attackTimer = attackTimer * Time.deltaTime;
+            //animController.SetBool("Attack", false);
         }
-        if(attackTimer < 0 || ph.currHealth <= 0)
+        else if(attackTimer < 0 || ph.currHealth <= 0)
         {
             //if player is dead
             attackTimer = -1;
             c.CamSwitch();
+            animController.SetBool("Attack", false);
+        }
+        else
+        {
+            animController.SetBool("Attack", false);
         }
 
         if(!(isDead))
@@ -72,6 +85,21 @@ public class EnemyController : MonoBehaviour
 
     void Attack()
     {
+        if(!(animController.GetBool("Attack")))
+        {
+            //2 is number of attacks
+            animController.SetFloat("AttackType", Random.Range(0, 2));
+        }
+        animController.SetBool("Attack", true);
+
+        //play zombie attack sound
+        if(!audio.isPlaying)
+        {
+            Debug.Log("test");
+            audio.clip = attackSounds[Random.Range(0, attackSounds.Length - 1)];
+            audio.Play();
+        }
+
         if(attackTimer == 0)
         {
             ph.changeHealth(damage);  
@@ -99,6 +127,9 @@ public class EnemyController : MonoBehaviour
         nav.Stop();
         capsuleCollider.isTrigger = true;
         deadAnim.SetTrigger("isDead");
+        audio.clip = deathSounds[Random.Range(0, deathSounds.Length - 1)];
+        audio.Play();
+        GameManagement.remainingZombies -= 1;
         Destroy(this.gameObject, 4f);
     }
 }
