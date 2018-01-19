@@ -95,7 +95,7 @@ public class EnemyController : MonoBehaviour
         //play zombie attack sound
         if(!audio.isPlaying)
         {
-            Debug.Log("test");
+            //Debug.Log("test");
             audio.clip = attackSounds[Random.Range(0, attackSounds.Length - 1)];
             audio.Play();
         }
@@ -105,7 +105,7 @@ public class EnemyController : MonoBehaviour
             ph.changeHealth(damage);  
             attackTimer = 2;
         }
-        Debug.Log(ph.currHealth);
+        //Debug.Log(ph.currHealth);
     }
 
     public void ApplyDmg(float dmg)
@@ -131,5 +131,6 @@ public class EnemyController : MonoBehaviour
         audio.Play();
         GameManagement.remainingZombies -= 1;
         Destroy(this.gameObject, 4f);
+        PlayerCanvas.canvas.SetZombiesLeft(GameManagement.remainingZombies);
     }
 }

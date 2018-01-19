@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManagement : MonoBehaviour 
 {
@@ -9,10 +10,15 @@ public class GameManagement : MonoBehaviour
     public int totalZombiesSpawnedInRound = 0;
     float zombieSpawnTimer = 0;
     public GameObject enemyZombie;
-    static int playerScore = 0;
-    static int playerPoints = 0;
+    public static int playerScore = 0;
+    public static int playerPoints = 0;
 
-    public GUISkin mySkin;
+    //GUI
+    //public GUISkin mySkin;
+    public GameObject CountdownGUI;
+    public static GameManagement canvas;
+    public Text scoreValue;
+    public Text pointsValue;
 
     //zombie rounds
     public static int remainingZombies = 10;
@@ -51,11 +57,20 @@ public class GameManagement : MonoBehaviour
         if(countDown > 0)
         {
             countDown -= Time.deltaTime;
+            PlayerCanvas.canvas.SetCountdown(Mathf.RoundToInt(countDown));
         }
         else
         {
             countDown = 0;
+            PlayerCanvas.canvas.SetCountdown(0);
+            StartCoroutine(DelayedGUI());
+            CountdownGUI.SetActive(false);
         }
+    }
+
+    IEnumerator DelayedGUI()
+    {
+        yield return new WaitForSeconds(1f);
     }
 
     void BeginNextRound()
@@ -65,6 +80,9 @@ public class GameManagement : MonoBehaviour
         totalZombiesSpawnedInRound = 0;
         countDown = 10;
         roundNum++;
+        PlayerCanvas.canvas.SetZombiesLeft(remainingZombies);
+        PlayerCanvas.canvas.SetRound(roundNum);
+        CountdownGUI.SetActive(true);
     }
 	
     // Update is called once per frame (fixed is to ensure same time between each call)
@@ -95,10 +113,15 @@ public class GameManagement : MonoBehaviour
 
     public static void AddPoints(int ptValue)
     {
+        //need to change this later when adding buyable weapons
+        //aka need to add functionality for subtracting points
         playerScore += ptValue;
+        PlayerCanvas.canvas.SetScore(playerScore);
         playerPoints += ptValue;
+        PlayerCanvas.canvas.SetPoints(playerPoints);
     }
-
+        
+    /*
     void OnGUI()
     {
         GUI.skin = mySkin;
@@ -122,4 +145,5 @@ public class GameManagement : MonoBehaviour
         GUI.Label(new Rect(100, Screen.height-50, 100, 60), "Spawned: ");
         GUI.Label(new Rect(200, Screen.height-50, 160, 60), "" + totalZombiesSpawnedInRound,s1);
     }
+    */
 }

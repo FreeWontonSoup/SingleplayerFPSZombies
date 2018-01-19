@@ -54,7 +54,7 @@ public class Gun : MonoBehaviour
                 target.ApplyDmg(5);
             }
             GameObject impactObject = Instantiate(particleImpact, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactObject, 2f);
+            Destroy(impactObject, .5f);
         }
     }
 
